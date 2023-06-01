@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>enter no</p>
+    <input type="text" id="no">
+    <button onclick="fact()">fact</button>
+    <button onclick="prime()">prime</button>
+    <div id="con"></div>
+    <script>
+         
+         function prime(){
+            let a=parseInt(document.getElementById(no));
+            let flag=0;
+            if (a==1 || a==0){
+                document.getElementById('con').innerHTML='<p> it is neither prime nor composite number</p>';
+            }
+            
+            else{
+                for(i=2;i<a;i++){
+                    if(a%i==0){
+                        flag=1;
+                        break;
+                        
+                    }
+                }
+            if(flag==1){
+                document.getElementById('con').innerHTML='<p> it is not primeno </p>';}
+            if(flag==0){
+                document.getElementById('con').innerHTML='<p> it is prime no</p>';
+            }
+                
+            }
+         }
+    function fact(){
+        let a=document.getElementById('no').value;
+         let fac=1;
+         for(i=1;i<=a;i++){
+             fac*=i;
+         }
+         document.getElementById('con').innerHTML=' <p> the factorial is '+fac+'</p>';}
+    </script>
+</body>
+</html>
