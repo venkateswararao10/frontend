@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Validation</h1>
+  
+  <form id="myForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><span id="nameError" class="error"></span>
+    <br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><span id="passwordError" class="error"></span>
+    <br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><span id="emailError" class="error"></span>
+    <br><br>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required><span id="phoneError" class="error"></span>
+    <br><br>
+    
+    <label for="address">Address:</label>
+    <textarea id="address" required></textarea><span id="addressError" class="error"></span>
+    <br><br>
+    
+    <label for="sex">Sex:</label>
+    <input type="radio" id="male" name="sex" value="male" required> Male
+    <input type="radio" id="female" name="sex" value="female"> Female
+    <span id="sexError" class="error"></span>
+    <br><br>
+    
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" required><span id="dobError" class="error"></span>
+    <br><br>
+    
+    <label for="languages">Languages Known:</label>
+    <input type="checkbox" id="english" name="languages" value="english"> English
+    <input type="checkbox" id="spanish" name="languages" value="telugu"> Telugu
+    <input type="checkbox" id="french" name="languages" value="hindi"> Hindi
+    <span id="languagesError" class="error"></span>
+    <br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      // Reset error messages
+      clearErrors();
+      
+      // Validate name
+      var name = document.getElementById("name").value;
+      if (name === "") {
+        document.getElementById("nameError").innerHTML = "Name is required";
+        return false;
+      }
+      
+      // Validate password
+      var password = document.getElementById("password").value;
+      if (password === "") {
+        document.getElementById("passwordError").innerHTML = "Password is required";
+        return false;
+      }
+      
+      // Validate email
+      var email = document.getElementById("email").value;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerHTML = "Invalid email address";
+        return false;
+      }
+      
+      // Validate phone number
+      var phone = document.getElementById("phone").value;
+      var phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(phone)) {
+        document.getElementById("phoneError").innerHTML = "Invalid phone number";
+        return false;
+      }
+      
+      // Validate address
+      var address = document.getElementById("address").value;
+      if (address === "") {
+        document.getElementById("addressError").innerHTML = "Address is required";
+        return false;
+      }
+      
+      // Validate sex
+      var male = document.getElementById("male").checked;
+      var female = document.getElementById("female").checked;
+      if (!male && !female) {
+        document.getElementById("sexError").innerHTML = "Sex is required";
+        return false;
+      }
+      
+      // Validate date of birth
+      var dob = document.getElementById("dob").value;
+      if (dob === "") {
+        document.getElementById("dobError").innerHTML = "Date of Birth is required";
+        return false;
+      }
+      
+      // Validate languages known
+      var english = document.getElementById("english").checked;
+      var telugu = document.getElementById("telugu").checked;
+      var hindi = document.getElementById("hindi").checked;
+      if (!english && !telugu && !english) {
+        document.getElementById("languagesError").innerHTML = "At least one language must be selected";
+        return false;
+      }
+      
+      // If all validations pass, the form is valid
+      return true;
+    }
+    
+    function clearErrors() {
+      var errorElements = document.getElementsByClassName("error");
+      for (var i = 0; i < errorElements.length; i++) {
+        errorElements[i].innerHTML = "";
+      }
+    }
+  </script>
+</body>
+</html>
