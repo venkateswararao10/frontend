@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+
+body {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: #ffffff;
+    font-family:"Helvetica Neue";
+  }
+h1{
+    font-size:70px;
+    text-align: center;
+    margin-top: 20%;
+    color: black;
+    font-family:"montserrat","Helvetica Neue";
+    font-weight: 400;
+    position: relative;
+
+}
+span{
+    color:#3DBE29;
+    font-size: 100px;
+    font-weight: bolder;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow';
+}
+p{
+    text-align: center;
+margin-top: -20px;
+border: auto;
+font-size: 20px;
+letter-spacing: 3px;
+box-shadow: 0px 0px 40px 2px red inset;
+position: absolute;
+left: 775px;
+bottom: -135px;
+border-radius: 95px;
+}
+.btn{
+    margin: auto;
+    display: block;
+    padding: 4px 15px;
+    background-color: transparent;
+    border: 2px solid #1f1f1f;
+  border-radius: 0.6em;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Montserrat";
+  font-weight: 900;
+    
+    cursor: grab;
+}
+.btn:hover{
+    color: #ffffff;
+  outline: 0;
+}
+.cl {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  
+  .cl:hover {
+    box-shadow: 0 0 40px 40px #1f1f1f inset;
+  }
