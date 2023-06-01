@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: black;
+            color: antiquewhite;
+        }
+        nav{
+            display: grid;
+grid-template-columns: auto 1299px 0px 0px;
+justify-content: end;
+grid-gap: 0px 0px;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            
+            justify-content:end;
+        }
+        ul li{
+list-style: none;
+margin: 12px 5px;
+        }
+        nav img{
+            width: 50px;
+            height: 50px;
+        }
+        .c1{
+            background-image: url(logo.png) ;
+            width:425vh;
+            height: 250vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container{
+            background-color: blueviolet;
+width: 425vh;
+height: 150vh;
+display: grid;
+justify-content: space-between;
+grid-template-columns: auto auto;
+
+        }
+        .b1{
+            width: 50vh;
+            height: 70vh;  
+            background-color:blue;
+        }
+        .b2{
+            width: 50vh;
+            height: 50vh;  
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src='logo.png' alt="">
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="c1"></div>
+    <div class="container">
+        <div class="b1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor aperiam possimus molestiae delectus quasi voluptatem odit libero, pariatur ipsam recusandae facilis maxime repudiandae aspernatur minima. Dolore ea soluta cupiditate numquam!</div>
+        <div class="b2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita itaque libero deserunt tenetur earum in, perferendis repellendus quisquam consequatur nemo eum maxime.</div>
+    </div>
+</body>
+</html>

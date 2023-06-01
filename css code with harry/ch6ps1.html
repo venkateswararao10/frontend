@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: orange;
+            height: 10vh;
+            width: 250vh;
+          
+        }
+        ul{
+            display: flex;
+justify-content: end;
+flex-direction: row; 
+padding: 2px 5px;
+           
+          
+        }
+       header nav ul li{
+           list-style: none;
+           
+            color: blue;
+            
+           margin: 5px;
+            
+        }
+        img{
+            width: 250px;
+            height: 50px;
+            float: left;
+        }
+        .c1{
+            background-image: url(logo.png) ;
+            width:250vh;
+            height: 250vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container{
+            background-color: blueviolet;
+            width: 200vh;
+            height: 150vh;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .b1{
+            width: 50vh;
+            height: 50vh;  
+            background-color:blue;
+        }
+        .b2{
+            width: 50vh;
+            height: 50vh;  
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src='logo.png' alt="">
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="c1"></div>
+    <div class="container">
+        <div class="b1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor aperiam possimus molestiae delectus quasi voluptatem odit libero, pariatur ipsam recusandae facilis maxime repudiandae aspernatur minima. Dolore ea soluta cupiditate numquam!</div>
+        <div class="b2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita itaque libero deserunt tenetur earum in, perferendis repellendus quisquam consequatur nemo eum maxime.</div>
+    </div>
+</body>
+</html>

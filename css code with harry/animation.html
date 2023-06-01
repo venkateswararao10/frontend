@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: aqua;
+
+        }
+        .box{
+            width: 300px;
+            background-color: red;
+            color:white;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: boxani 3s ease-in-out 1s infinite  alternate-reverse;
+        }
+        @keyframes boxani {
+            from {
+                width: 300px;
+                height:300px;
+        }
+        to{
+            width: 30px;
+                height:30px;
+        }}
+        img{
+            animation: widthAnimate2 5s ease-in-out 5s 5 alternate;
+        }
+        @keyframes widthAnimate2 {
+            0%{
+                width: 30px;
+                height: 30px;
+            }
+
+            20%{
+                width: 130px;
+                height: 130px;
+            }
+
+            100%{
+                width: 1190px;
+                height: 1190px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+      hello  </div> 
+        <img src="logo.png" alt="" width="344px">
+    </div>
+</body>
+</html>
